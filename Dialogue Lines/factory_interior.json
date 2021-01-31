@@ -1,0 +1,5 @@
+{
+	"1" : { "text" : "The inside of the factory. This is where the products are created."},
+	"2" : { "text" : "This is where all the [color=#5890cb]components are put together into the final product[/color]. Many of these components require a lot of [color=#5890cb]resources and power to create[/color]. Metals have to be mined and smelted, which release [color=#ffff00]greenhouse gases[/color]."},
+	"3" : { "text" : "This is where the [color=#5890cb]software[/color] for these products are created, as well as the original [color=#5890cb]product designs[/color]. They intentionally [color=#5890cb]limit the lifespan[/color] of the products in order to sell more. This causes [color=#ffff00]unnecessary waste[/color] to be generated and is a practice called [color=#ffff00]planned obsolescence[/color]."}
+}
