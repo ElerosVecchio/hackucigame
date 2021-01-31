@@ -1,7 +1,7 @@
-@@ -0,0 +1,5 @@
 {
-	"1" : { "text" : "Land(Trash) Dialogue"},
-	"2" : { "text" : "second line [color=#5890cb]blue[/color]"}
-	"3":  { "text" : " "}
+	"1" : { "text" : " Throwing random color=#5890cb]trash[/color] not only would cause our beautiful ocean to [color=#ffff00]turn grey, it would also destroy living animals’ inhabitants."},
+	"2" : { "text" : "Humans are trying to collect numerous overwhelming gigantic piles of [color=#5890cb]trash[/color] that they cause but the situation is [color=#ffff00]not getting better."},
+	"3" : { "text" : "[color=#5890cb]CRT screens[/color], along with other e-waste, contain harmful materials such as lead. These materials can leach into the environment and become harmful."}
+	
     
 }
