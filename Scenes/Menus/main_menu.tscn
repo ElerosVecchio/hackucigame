@@ -9,9 +9,9 @@ margin_right = 766.0
 margin_bottom = 189.0
 custom_fonts/normal_font = ExtResource( 1 )
 bbcode_enabled = true
-bbcode_text = "test string.
+bbcode_text = "[test string.
 hello hello hello"
-text = "test string.
+text = "[test string.
 hello hello hello"
 __meta__ = {
 "_edit_use_anchors_": false
