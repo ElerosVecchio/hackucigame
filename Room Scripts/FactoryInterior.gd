@@ -47,7 +47,7 @@ func _on_door_pressed():
 	get_tree().change_scene("res://Scenes/game scenes/forest.tscn")
 
 func _on_door_mouse_entered():
-	Input.set_custom_mouse_cursor(next_cursor)
+	Input.set_custom_mouse_cursor(next_cursor, 0, Vector2(32,32))
 
 func _on_door_mouse_exited():
 	change_mouse(false)
@@ -56,7 +56,7 @@ func _on_back_pressed():
 	get_tree().change_scene("res://Scenes/game scenes/factory_exterior.tscn")
 
 func _on_back_mouse_entered():
-	Input.set_custom_mouse_cursor(back_cursor)
+	Input.set_custom_mouse_cursor(back_cursor, 0, Vector2(32,32))
 
 func _on_back_mouse_exited():
 	change_mouse(false)

@@ -36,7 +36,7 @@ func _on_door_pressed():
 	get_tree().change_scene("res://Scenes/game scenes/factory_interior.tscn")
 
 func _on_door_mouse_entered():
-	Input.set_custom_mouse_cursor(next_cursor)
+	Input.set_custom_mouse_cursor(next_cursor, 0, Vector2(32,32))
 
 func _on_door_mouse_exited():
 	change_mouse(false)
