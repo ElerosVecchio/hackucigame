@@ -1,5 +1,6 @@
 {
-  "1" : {"text" : }
-  "2" : 
-  "3" : 
+	"1" : { "text" : "Sigh... a prime example of [color=#5890cb]deforestation[/color]. [color=#ffff00]All the trees have been cut down to use as building materials and to clear up land for future development.[/color] This has adverse effects on many aspects of the environment and human life."},
+	"2" : { "text" : "[color=#5890cb]Deforestation[/color] is a major problem due to [color=#ffff00]the lack of trees that are able to take in carbon dioxide and produce oxygen for living organisms.[/color]"},
+	"3" : { "text" : "Many animals rely on trees for many purposes. [color=#5890cb]Trees[/color] provide shelter and food that are vital for animal’s survival. With the removal of trees, many animals are displaced and are forced to move to other areas in order to find the necessary resources." },
+  "4" : { "text" : "[color=#5890cb]With trees cut down in massive amounts[/color], there are [color=#ffff00]no roots to keep the soil together and causes erosion and landslides when rains come[/color]. In addition, without the shade from the trees, [color=#ffff00]the soil beneath is under direct sunlight and causes it to lose its moisture necessary for plant growth.[/color]"}
 }
