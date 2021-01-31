@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Images/UI/character_portrait.png" type="Texture" id=1]
 [ext_resource path="res://Images/UI/dialogue_box.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Dialogue/DialogueBox.gd" type="Script" id=3]
 [ext_resource path="res://Font/pixelcaps.tres" type="DynamicFont" id=4]
 [ext_resource path="res://Images/UI/end_game_button.png" type="Texture" id=5]
+[ext_resource path="res://Images/UI/backing.png" type="Texture" id=6]
+[ext_resource path="res://Images/UI/back_button.png" type="Texture" id=7]
+[ext_resource path="res://Images/UI/proceed.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/Dialogue/QuizHandler.gd" type="Script" id=9]
 
 [node name="DialogueBox" type="Polygon2D"]
 position = Vector2( -111, 0 )
@@ -59,10 +63,90 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="notdone" type="TextureRect" parent="."]
+visible = false
+margin_left = 480.0
+margin_top = 200.0
+margin_right = 1180.0
+margin_bottom = 600.0
+texture = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="RichTextLabel" type="RichTextLabel" parent="notdone"]
+margin_top = 102.0
+margin_right = 701.0
+margin_bottom = 172.0
+custom_fonts/normal_font = ExtResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[center]You haven't seen everything! Find all the interactable objects, then take the quiz![/center]"
+text = "You haven't seen everything! Find all the interactable objects, then take the quiz!"
+scroll_active = false
+
+[node name="back" type="TextureButton" parent="notdone"]
+margin_left = 231.0
+margin_top = 200.0
+margin_right = 431.0
+margin_bottom = 300.0
+disabled = true
+texture_normal = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="areyousure" type="TextureRect" parent="."]
+visible = false
+margin_left = 480.0
+margin_top = 200.0
+margin_right = 1180.0
+margin_bottom = 600.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="areyousure"]
+margin_top = 102.0
+margin_right = 701.0
+margin_bottom = 172.0
+custom_fonts/normal_font = ExtResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[center]You can take the quiz! Once you start, you cant go back. Are you sure you want to continue?[/center]"
+text = "You can take the quiz! Once you start, you cant go back. Are you sure you want to continue?"
+scroll_active = false
+
+[node name="continue" type="TextureButton" parent="areyousure"]
+margin_left = 81.0
+margin_top = 200.0
+margin_right = 281.0
+margin_bottom = 300.0
+disabled = true
+texture_normal = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="back2" type="TextureButton" parent="areyousure"]
+margin_left = 381.0
+margin_top = 200.0
+margin_right = 581.0
+margin_bottom = 300.0
+disabled = true
+texture_normal = ExtResource( 7 )
+
+[node name="QuizHandler" type="Node" parent="."]
+script = ExtResource( 9 )
 [connection signal="timeout" from="Timer" to="box/text_box" method="_on_Timer_timeout"]
+[connection signal="mouse_entered" from="end_game" to="QuizHandler" method="_on_end_game_mouse_entered"]
+[connection signal="mouse_exited" from="end_game" to="QuizHandler" method="_on_end_game_mouse_exited"]
+[connection signal="pressed" from="end_game" to="QuizHandler" method="_on_end_game_pressed"]
+[connection signal="mouse_entered" from="notdone/back" to="QuizHandler" method="_on_back_mouse_entered"]
+[connection signal="mouse_exited" from="notdone/back" to="QuizHandler" method="_on_back_mouse_exited"]
+[connection signal="pressed" from="notdone/back" to="QuizHandler" method="_on_back_pressed"]
+[connection signal="mouse_entered" from="areyousure/continue" to="QuizHandler" method="_on_continue_mouse_entered"]
+[connection signal="mouse_exited" from="areyousure/continue" to="QuizHandler" method="_on_continue_mouse_exited"]
+[connection signal="pressed" from="areyousure/continue" to="QuizHandler" method="_on_continue_pressed"]
+[connection signal="mouse_entered" from="areyousure/back2" to="QuizHandler" method="_on_back2_mouse_entered"]
+[connection signal="mouse_exited" from="areyousure/back2" to="QuizHandler" method="_on_back2_mouse_exited"]
+[connection signal="pressed" from="areyousure/back2" to="QuizHandler" method="_on_back2_pressed"]
