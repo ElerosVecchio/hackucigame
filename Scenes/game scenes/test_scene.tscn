@@ -16,7 +16,7 @@ __meta__ = {
 
 [node name="DialogueHandler" type="Node" parent="."]
 script = ExtResource( 2 )
-dialogue_path = "res://Dialogue Lines/test.json"
+dialogue_path = "res://Dialogue Lines/factory_exterior.json"
 
 [node name="Background" type="TextureRect" parent="."]
 margin_left = 80.0
