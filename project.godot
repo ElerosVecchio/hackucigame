@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="teachsustainability"
-run/main_scene="res://Scenes/Menus/main_menu.tscn"
+run/main_scene="res://Scenes/game scenes/test_scene.tscn"
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
 
@@ -29,5 +29,5 @@ window/stretch/aspect="keep"
 
 [rendering]
 
-environment/default_clear_color=Color( 0.211765, 0.211765, 0.211765, 1 )
+environment/default_clear_color=Color( 0, 0, 0, 1 )
 environment/default_environment="res://default_env.tres"

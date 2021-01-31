@@ -3,6 +3,5 @@
 [ext_resource path="res://Font/PixelCaps!.ttf" type="DynamicFontData" id=1]
 
 [resource]
-size = 21
 extra_spacing_top = 5
 font_data = ExtResource( 1 )
