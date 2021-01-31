@@ -2,7 +2,7 @@ extends Node
 
 export (String, FILE, "*.json") var dialogue_path
 
-func onInteract():
+func scene_starts():
 	var dialogue = load_from_json(dialogue_path)
 
 func load_from_json(dialogue_path):
