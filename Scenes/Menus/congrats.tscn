@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Font/pixelcaps_quiz.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Room Scripts/congrats.gd" type="Script" id=2]
+[ext_resource path="res://Images/UI/mainmenu.png" type="Texture" id=3]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 80.0
+margin_top = 300.0
+margin_right = 1360.0
+margin_bottom = 500.0
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "
+[center][color=#ffff00]CONGRATULATIONS![/color]
+YOU FINISHED THE GAME[/center]"
+text = "
+CONGRATULATIONS!
+YOU FINISHED THE GAME"
+
+[node name="main" type="TextureButton" parent="."]
+margin_left = 570.0
+margin_top = 530.0
+margin_right = 870.0
+margin_bottom = 680.0
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="congrats" type="Node" parent="."]
+script = ExtResource( 2 )
+[connection signal="pressed" from="main" to="congrats" method="_on_main_pressed"]

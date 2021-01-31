@@ -1,4 +1,8 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Font/pixelcaps_quiz.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Images/UI/play.png" type="Texture" id=2]
+[ext_resource path="res://Room Scripts/ahhhh.gd" type="Script" id=3]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -6,3 +10,56 @@ anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 1410.0
+margin_bottom = 870.0
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "
+
+
+
+[center]You are an employee working for the EPA. Your job is to learn about the [color=#ffff00]causes of environmental damage[/color].
+
+When your cursor is a [color=#ffff00]green plus[/color], you can click to learn about a cause of environmental harm.
+
+If you [color=#ffff00]click at the bottom of the environment[/color], you will be take to the previous area.
+
+When you hover over an area and your cursor turns into an [color=#ffff00]up arrow[/color], you can click to move to the next area.
+
+[color=#5890cb]Investigate every cause in the environment and take a short quiz to beat the game![/color][/center]"
+text = "
+
+
+
+You are an employee working for the EPA. Your job is to learn about the causes of environmental damage.
+
+When your cursor is a green plus, you can click to learn about a cause of environmental harm.
+
+If you click at the bottom of the environment, you will be take to the previous area.
+
+When you hover over an area and your cursor turns into an up arrow, you can click to move to the next area.
+
+Investigate every cause in the environment and take a short quiz to beat the game!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 570.0
+margin_top = 900.0
+margin_right = 870.0
+margin_bottom = 1050.0
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ahhhh" type="Node" parent="."]
+script = ExtResource( 3 )
+[connection signal="mouse_entered" from="TextureButton" to="ahhhh" method="_on_TextureButton_mouse_entered"]
+[connection signal="mouse_exited" from="TextureButton" to="ahhhh" method="_on_TextureButton_mouse_exited"]
+[connection signal="pressed" from="TextureButton" to="ahhhh" method="_on_TextureButton_pressed"]

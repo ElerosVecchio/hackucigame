@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Images/UI/quizbox.png" type="Texture" id=1]
 [ext_resource path="res://Font/pixelcaps_quiz.tres" type="DynamicFont" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://Images/UI/submit.png" type="Texture" id=5]
 [ext_resource path="res://Room Scripts/Quiz/Q1.gd" type="Script" id=6]
 [ext_resource path="res://Room Scripts/Quiz/Q2.gd" type="Script" id=7]
+[ext_resource path="res://Room Scripts/Quiz/Q3.gd" type="Script" id=8]
+[ext_resource path="res://Room Scripts/Quiz/Q4.gd" type="Script" id=9]
+[ext_resource path="res://Room Scripts/Quiz/Q5.gd" type="Script" id=10]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -28,7 +31,6 @@ __meta__ = {
 }
 
 [node name="Question 1" type="VBoxContainer" parent="TextureRect"]
-visible = false
 margin_right = 960.0
 margin_bottom = 900.0
 __meta__ = {
@@ -150,6 +152,7 @@ text = "
 Incorrect"
 
 [node name="Question 2" type="VBoxContainer" parent="TextureRect"]
+visible = false
 margin_right = 960.0
 margin_bottom = 900.0
 __meta__ = {
@@ -269,6 +272,374 @@ bbcode_text = "
 [center][color=red]Incorrect[/color][/center]"
 text = "
 Incorrect"
+
+[node name="Question 3" type="VBoxContainer" parent="TextureRect"]
+visible = false
+margin_right = 960.0
+margin_bottom = 900.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Q3" type="Node" parent="TextureRect/Question 3"]
+script = ExtResource( 8 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/Question 3"]
+margin_right = 960.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 0, 200 )
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "
+[center]What is/are the [color=#ffff00]consequences[/color] of [color=#ffff00]dumping waste[/color]?
+(select one)[/center]"
+text = "
+What is/are the consequences of dumping waste?
+(select one)"
+scroll_active = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/Question 3"]
+margin_top = 204.0
+margin_right = 960.0
+margin_bottom = 384.0
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/Question 3/HBoxContainer"]
+margin_right = 50.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 50, 0 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/Question 3/HBoxContainer"]
+margin_left = 54.0
+margin_right = 873.0
+margin_bottom = 180.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pollute" type="CheckBox" parent="TextureRect/Question 3/HBoxContainer/VBoxContainer"]
+margin_right = 819.0
+margin_bottom = 42.0
+custom_icons/checked = ExtResource( 3 )
+custom_icons/unchecked = ExtResource( 4 )
+custom_fonts/font = ExtResource( 2 )
+text = " Polluting the environment"
+
+[node name="ocean" type="CheckBox" parent="TextureRect/Question 3/HBoxContainer/VBoxContainer"]
+margin_top = 46.0
+margin_right = 819.0
+margin_bottom = 88.0
+custom_icons/checked = ExtResource( 3 )
+custom_icons/unchecked = ExtResource( 4 )
+custom_fonts/font = ExtResource( 2 )
+text = " Filling the ocean with trash"
+
+[node name="animals" type="CheckBox" parent="TextureRect/Question 3/HBoxContainer/VBoxContainer"]
+margin_top = 92.0
+margin_right = 819.0
+margin_bottom = 134.0
+custom_icons/checked = ExtResource( 3 )
+custom_icons/unchecked = ExtResource( 4 )
+custom_fonts/font = ExtResource( 2 )
+text = " putting animals at risk"
+
+[node name="all" type="CheckBox" parent="TextureRect/Question 3/HBoxContainer/VBoxContainer"]
+margin_top = 138.0
+margin_right = 819.0
+margin_bottom = 180.0
+custom_icons/checked = ExtResource( 3 )
+custom_icons/unchecked = ExtResource( 4 )
+custom_fonts/font = ExtResource( 2 )
+text = " all of the above"
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/Question 3"]
+margin_top = 388.0
+margin_right = 960.0
+margin_bottom = 408.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TextureRect/Question 3"]
+margin_top = 412.0
+margin_right = 960.0
+margin_bottom = 562.0
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/Question 3/HBoxContainer2"]
+margin_right = 330.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 330, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="submit1" type="TextureButton" parent="TextureRect/Question 3/HBoxContainer2"]
+margin_left = 334.0
+margin_right = 634.0
+margin_bottom = 150.0
+texture_normal = ExtResource( 5 )
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect/Question 3"]
+margin_top = 566.0
+margin_right = 960.0
+margin_bottom = 616.0
+rect_min_size = Vector2( 0, 50 )
+
+[node name="incorrect1" type="RichTextLabel" parent="TextureRect/Question 3"]
+visible = false
+margin_top = 620.0
+margin_right = 960.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 0, 100 )
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "
+[center][color=red]Incorrect[/color][/center]"
+text = "
+Incorrect"
+
+[node name="Question 4" type="VBoxContainer" parent="TextureRect"]
+visible = false
+margin_right = 960.0
+margin_bottom = 900.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Q4" type="Node" parent="TextureRect/Question 4"]
+script = ExtResource( 9 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/Question 4"]
+margin_right = 977.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 0, 200 )
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "
+[center]Why is stopping [color=#ffff00]deforestation[/color] important?
+(select one)[/center]"
+text = "
+Why is stopping deforestation important?
+(select one)"
+scroll_active = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/Question 4"]
+margin_top = 204.0
+margin_right = 977.0
+margin_bottom = 384.0
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/Question 4/HBoxContainer"]
+margin_right = 50.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 50, 0 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/Question 4/HBoxContainer"]
+margin_left = 54.0
+margin_right = 763.0
+margin_bottom = 180.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tree" type="CheckBox" parent="TextureRect/Question 4/HBoxContainer/VBoxContainer"]
+margin_right = 709.0
+margin_bottom = 42.0
+custom_icons/checked = ExtResource( 3 )
+custom_icons/unchecked = ExtResource( 4 )
+custom_fonts/font = ExtResource( 2 )
+text = " Trees provide oxygen"
+
+[node name="animals" type="CheckBox" parent="TextureRect/Question 4/HBoxContainer/VBoxContainer"]
+margin_top = 46.0
+margin_right = 709.0
+margin_bottom = 88.0
+custom_icons/checked = ExtResource( 3 )
+custom_icons/unchecked = ExtResource( 4 )
+custom_fonts/font = ExtResource( 2 )
+text = " gives animals resources"
+
+[node name="erode" type="CheckBox" parent="TextureRect/Question 4/HBoxContainer/VBoxContainer"]
+margin_top = 92.0
+margin_right = 709.0
+margin_bottom = 134.0
+custom_icons/checked = ExtResource( 3 )
+custom_icons/unchecked = ExtResource( 4 )
+custom_fonts/font = ExtResource( 2 )
+text = " prevents erosion"
+
+[node name="all" type="CheckBox" parent="TextureRect/Question 4/HBoxContainer/VBoxContainer"]
+margin_top = 138.0
+margin_right = 709.0
+margin_bottom = 180.0
+custom_icons/checked = ExtResource( 3 )
+custom_icons/unchecked = ExtResource( 4 )
+custom_fonts/font = ExtResource( 2 )
+text = " all of the above"
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/Question 4"]
+margin_top = 388.0
+margin_right = 977.0
+margin_bottom = 408.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TextureRect/Question 4"]
+margin_top = 412.0
+margin_right = 977.0
+margin_bottom = 562.0
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/Question 4/HBoxContainer2"]
+margin_right = 330.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 330, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="submit1" type="TextureButton" parent="TextureRect/Question 4/HBoxContainer2"]
+margin_left = 334.0
+margin_right = 634.0
+margin_bottom = 150.0
+texture_normal = ExtResource( 5 )
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect/Question 4"]
+margin_top = 566.0
+margin_right = 977.0
+margin_bottom = 616.0
+rect_min_size = Vector2( 0, 50 )
+
+[node name="incorrect1" type="RichTextLabel" parent="TextureRect/Question 4"]
+visible = false
+margin_top = 620.0
+margin_right = 960.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 0, 100 )
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "
+[center][color=red]Incorrect[/color][/center]"
+text = "
+Incorrect"
+
+[node name="Question 5" type="VBoxContainer" parent="TextureRect"]
+visible = false
+margin_right = 960.0
+margin_bottom = 900.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Q5" type="Node" parent="TextureRect/Question 5"]
+script = ExtResource( 10 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/Question 5"]
+margin_right = 960.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 0, 200 )
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "
+[center]The act of [color=#ffff00]intentionally shortening a product's
+lifespan[/color] is called what?
+(select one)[/center]"
+text = "
+The act of intentionally shortening a product's
+lifespan is called what?
+(select one)"
+scroll_active = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/Question 5"]
+margin_top = 204.0
+margin_right = 960.0
+margin_bottom = 384.0
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/Question 5/HBoxContainer"]
+margin_right = 50.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 50, 0 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/Question 5/HBoxContainer"]
+margin_left = 54.0
+margin_right = 696.0
+margin_bottom = 180.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="prepare" type="CheckBox" parent="TextureRect/Question 5/HBoxContainer/VBoxContainer"]
+margin_right = 642.0
+margin_bottom = 42.0
+custom_icons/checked = ExtResource( 3 )
+custom_icons/unchecked = ExtResource( 4 )
+custom_fonts/font = ExtResource( 2 )
+text = " preparedness"
+
+[node name="short" type="CheckBox" parent="TextureRect/Question 5/HBoxContainer/VBoxContainer"]
+margin_top = 46.0
+margin_right = 642.0
+margin_bottom = 88.0
+custom_icons/checked = ExtResource( 3 )
+custom_icons/unchecked = ExtResource( 4 )
+custom_fonts/font = ExtResource( 2 )
+text = " short selling"
+
+[node name="planned" type="CheckBox" parent="TextureRect/Question 5/HBoxContainer/VBoxContainer"]
+margin_top = 92.0
+margin_right = 642.0
+margin_bottom = 134.0
+custom_icons/checked = ExtResource( 3 )
+custom_icons/unchecked = ExtResource( 4 )
+custom_fonts/font = ExtResource( 2 )
+text = " planned obsolesence"
+
+[node name="fraud" type="CheckBox" parent="TextureRect/Question 5/HBoxContainer/VBoxContainer"]
+margin_top = 138.0
+margin_right = 642.0
+margin_bottom = 180.0
+custom_icons/checked = ExtResource( 3 )
+custom_icons/unchecked = ExtResource( 4 )
+custom_fonts/font = ExtResource( 2 )
+text = " fraud"
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/Question 5"]
+margin_top = 388.0
+margin_right = 960.0
+margin_bottom = 408.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TextureRect/Question 5"]
+margin_top = 412.0
+margin_right = 960.0
+margin_bottom = 562.0
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/Question 5/HBoxContainer2"]
+margin_right = 330.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 330, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="submit1" type="TextureButton" parent="TextureRect/Question 5/HBoxContainer2"]
+margin_left = 334.0
+margin_right = 634.0
+margin_bottom = 150.0
+texture_normal = ExtResource( 5 )
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect/Question 5"]
+margin_top = 566.0
+margin_right = 960.0
+margin_bottom = 616.0
+rect_min_size = Vector2( 0, 50 )
+
+[node name="incorrect1" type="RichTextLabel" parent="TextureRect/Question 5"]
+visible = false
+margin_top = 620.0
+margin_right = 960.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 0, 100 )
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "
+[center][color=red]Incorrect[/color][/center]"
+text = "
+Incorrect"
 [connection signal="toggled" from="TextureRect/Question 1/HBoxContainer/VBoxContainer/oxygen" to="TextureRect/Question 1/Q1" method="_on_oxygen_toggled"]
 [connection signal="toggled" from="TextureRect/Question 1/HBoxContainer/VBoxContainer/co2" to="TextureRect/Question 1/Q1" method="_on_co2_toggled"]
 [connection signal="toggled" from="TextureRect/Question 1/HBoxContainer/VBoxContainer/hydrogen" to="TextureRect/Question 1/Q1" method="_on_hydrogen_toggled"]
@@ -279,3 +650,18 @@ Incorrect"
 [connection signal="toggled" from="TextureRect/Question 2/HBoxContainer/VBoxContainer/lead" to="TextureRect/Question 2/Q2" method="_on_lead_toggled"]
 [connection signal="toggled" from="TextureRect/Question 2/HBoxContainer/VBoxContainer/ewaste" to="TextureRect/Question 2/Q2" method="_on_ewaste_toggled"]
 [connection signal="pressed" from="TextureRect/Question 2/HBoxContainer2/submit1" to="TextureRect/Question 2/Q2" method="_on_submit1_pressed"]
+[connection signal="toggled" from="TextureRect/Question 3/HBoxContainer/VBoxContainer/pollute" to="TextureRect/Question 3/Q3" method="_on_pollute_toggled"]
+[connection signal="toggled" from="TextureRect/Question 3/HBoxContainer/VBoxContainer/ocean" to="TextureRect/Question 3/Q3" method="_on_ocean_toggled"]
+[connection signal="toggled" from="TextureRect/Question 3/HBoxContainer/VBoxContainer/animals" to="TextureRect/Question 3/Q3" method="_on_animals_toggled"]
+[connection signal="toggled" from="TextureRect/Question 3/HBoxContainer/VBoxContainer/all" to="TextureRect/Question 3/Q3" method="_on_all_toggled"]
+[connection signal="pressed" from="TextureRect/Question 3/HBoxContainer2/submit1" to="TextureRect/Question 3/Q3" method="_on_submit1_pressed"]
+[connection signal="toggled" from="TextureRect/Question 4/HBoxContainer/VBoxContainer/tree" to="TextureRect/Question 4/Q4" method="_on_tree_toggled"]
+[connection signal="toggled" from="TextureRect/Question 4/HBoxContainer/VBoxContainer/animals" to="TextureRect/Question 4/Q4" method="_on_animals_toggled"]
+[connection signal="toggled" from="TextureRect/Question 4/HBoxContainer/VBoxContainer/erode" to="TextureRect/Question 4/Q4" method="_on_erode_toggled"]
+[connection signal="toggled" from="TextureRect/Question 4/HBoxContainer/VBoxContainer/all" to="TextureRect/Question 4/Q4" method="_on_all_toggled"]
+[connection signal="pressed" from="TextureRect/Question 4/HBoxContainer2/submit1" to="TextureRect/Question 4/Q4" method="_on_submit1_pressed"]
+[connection signal="toggled" from="TextureRect/Question 5/HBoxContainer/VBoxContainer/prepare" to="TextureRect/Question 5/Q5" method="_on_prepare_toggled"]
+[connection signal="toggled" from="TextureRect/Question 5/HBoxContainer/VBoxContainer/short" to="TextureRect/Question 5/Q5" method="_on_short_toggled"]
+[connection signal="toggled" from="TextureRect/Question 5/HBoxContainer/VBoxContainer/planned" to="TextureRect/Question 5/Q5" method="_on_planned_toggled"]
+[connection signal="toggled" from="TextureRect/Question 5/HBoxContainer/VBoxContainer/fraud" to="TextureRect/Question 5/Q5" method="_on_fraud_toggled"]
+[connection signal="pressed" from="TextureRect/Question 5/HBoxContainer2/submit1" to="TextureRect/Question 5/Q5" method="_on_submit1_pressed"]
