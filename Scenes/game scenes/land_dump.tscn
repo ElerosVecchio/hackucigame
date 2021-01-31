@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Dialogue/DialogueBox.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Images/locations/dump.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Dialogue/DialogueHandler.gd" type="Script" id=3]
+[ext_resource path="res://Room Scripts/Dump_Room.gd" type="Script" id=4]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -27,4 +28,45 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="garbage_pile" type="TextureButton" parent="TextureRect"]
+margin_top = 100.0
+margin_right = 640.0
+margin_bottom = 350.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tractor" type="TextureButton" parent="TextureRect"]
+margin_left = 680.0
+margin_top = 30.0
+margin_right = 1120.0
+margin_bottom = 310.0
+
+[node name="crt" type="TextureButton" parent="TextureRect"]
+margin_left = 310.0
+margin_top = 430.0
+margin_right = 660.0
+margin_bottom = 570.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="back" type="TextureButton" parent="TextureRect"]
+margin_top = 630.0
+margin_right = 1280.0
+margin_bottom = 720.0
+
 [node name="Dump_Room" type="Node" parent="."]
+script = ExtResource( 4 )
+[connection signal="mouse_entered" from="TextureRect/garbage_pile" to="Dump_Room" method="_on_garbage_pile_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/garbage_pile" to="Dump_Room" method="_on_garbage_pile_mouse_exited"]
+[connection signal="pressed" from="TextureRect/garbage_pile" to="Dump_Room" method="_on_garbage_pile_pressed"]
+[connection signal="mouse_entered" from="TextureRect/tractor" to="Dump_Room" method="_on_tractor_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/tractor" to="Dump_Room" method="_on_tractor_mouse_exited"]
+[connection signal="pressed" from="TextureRect/tractor" to="Dump_Room" method="_on_tractor_pressed"]
+[connection signal="mouse_entered" from="TextureRect/crt" to="Dump_Room" method="_on_crt_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/crt" to="Dump_Room" method="_on_crt_mouse_exited"]
+[connection signal="pressed" from="TextureRect/crt" to="Dump_Room" method="_on_crt_pressed"]
+[connection signal="mouse_entered" from="TextureRect/back" to="Dump_Room" method="_on_back_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/back" to="Dump_Room" method="_on_back_mouse_exited"]
+[connection signal="pressed" from="TextureRect/back" to="Dump_Room" method="_on_back_pressed"]

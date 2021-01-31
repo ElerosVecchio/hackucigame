@@ -1,7 +1,6 @@
 {
-	"1" : { "text" : " Throwing random color=#5890cb]trash[/color] not only would cause our beautiful ocean to [color=#ffff00]turn grey, it would also destroy living animals’ inhabitants."},
-	"2" : { "text" : "Humans are trying to collect numerous overwhelming gigantic piles of [color=#5890cb]trash[/color] that they cause but the situation is [color=#ffff00]not getting better."},
-	"3" : { "text" : "[color=#5890cb]CRT screens[/color], along with other e-waste, contain harmful materials such as lead. These materials can leach into the environment and become harmful."}
-	
-    
+	"1" : { "text" : "A landfill where garbage and trash is dumped."},
+	"2" : { "text" : "Humans are trying to [color=#5890cb]organize the numerous overwhelming gigantic piles of trash[/color] that they cause but the [color=#ffff00]land is still being destroyed[/color]."},
+	"3" : { "text" : "[color=#5890cb]CRT screens[/color], along with other [color=#ffff00]e-waste[/color], contain harmful materials such as lead. These materials can [color=#ffff00]leach into the environment and become harmful[/color]."},
+	"4" : { "text" : "They pile up [color=#5890cb]garbage and waste[/color] into large piles in dumps, leading to the [color=#ffff00]land being unusable[/color]."}
 }
