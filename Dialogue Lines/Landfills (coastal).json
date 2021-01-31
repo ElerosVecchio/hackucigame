@@ -1,5 +1,7 @@
 {
-	"1" : { "text" : "Test dialogue"},
-	"2" : { "text" : "second line [color=#ffff00]yellow[/color]"}
+	"1" : { "text" : "The beach is severely polluted with a vast amount of [color=#ffff00]plastic waste[/color] and [color=#ffff00]garbage[/color]."},
+	"2" : { "text" : "The surrounding animals got badly injured or killed when they accidentally ran into several [color=#ffff00]plastic rings[/color] littered by humans."}
+    "3" : { "text" : "Most [color=#5890cb]garbage[/color] in the ocean is [color=#ffff00]not disposable[/color], such as [color=#ffff00]plastic products[/color], thus resulting in a tremendous increase in [color=#ffff00]floating waste[/color] from time to time."}
+    "4" : { "text" : "There are several [color=#5890cb]sewages[/color] that are [color=#5890cb]unmonitored[/color] and [color=#5890cb]unregulated[/color], which leads to severe [color=#5890cb]sewage pollution[/color]. The main cause of this is because humans fail to set and enforce more stringent [color=#5890cb]standards[/color]; moreover, they are not capable of effectively detecting [color=#ffff00]chemical components[/color] as well as testing [color=#ffff00]water quality[/color]."}
     
 }
