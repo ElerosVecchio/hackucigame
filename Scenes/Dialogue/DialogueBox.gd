@@ -1,15 +1,15 @@
 extends RichTextLabel
 
 var dialogue_store
-var line = "1"
 
 func first_line(dialogue):
 	dialogue_store = dialogue
 	set_visible_characters(0)
-	set_bbcode(dialogue_store[line])
+	set_bbcode(dialogue_store["1"])
 
 func new_line(line):
-	pass
+	set_visible_characters(0)
+	set_bbcode(dialogue_store[line])
 
 func _on_Timer_timeout():
 	pass # Replace with function body.
